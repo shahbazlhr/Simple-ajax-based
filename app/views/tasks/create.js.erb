@@ -1,0 +1,7 @@
+var oldForm = $('#new-post-form');
+<% if @task.errors.any? %>
+  oldForm.html('<%= j( render 'form' ) %>');
+<% else %>
+  oldForm.remove();
+  $('tbody').prepend('<%= j(render @task) %>');
+<% end %>

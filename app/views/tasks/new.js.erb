@@ -1,0 +1,3 @@
+var form = $('<%= j(render 'form') %>');
+var wrapper = $('<div>').attr('id', 'new-post-form').append(form);
+$('body').append(wrapper);
